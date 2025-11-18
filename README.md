@@ -12,6 +12,3 @@
 | C-λ₁-2.0×    | λ₁ ablation     | cGAN + 2.0·L1 + Perceptual                    | Yes  | Yes | Yes         | λ₁ = 2.0·λ₁*    | λ₂ = λ₂*        | 
 | C-λ₂-0.5×    | λ₂ ablation     | cGAN + L1 + 0.5·Perceptual                    | Yes  | Yes | Yes         | λ₁ = λ₁*        | λ₂ = 0.5·λ₂*    | 
 | C-λ₂-2.0×    | λ₂ ablation     | cGAN + L1 + 2.0·Perceptual                    | Yes  | Yes | Yes         | λ₁ = λ₁*        | λ₂ = 2.0·λ₂*    | 
-| G            | Arch ablation   | Shallow U-Net + L1                            | No   | Yes | No          | λ₁ = λ₁*        | λ₂ = 0          | 
-| H1           | Arch ablation   | ResNet generator + cGAN + L1                  | Yes  | Yes | No          | λ₁ = λ₁*        | λ₂ = 0          | 
-| H2           | Arch ablation   | ResNet generator + cGAN + L1 + Perceptual     | Yes  | Yes | Yes         | λ₁ = λ₁*        | λ₂ = λ₂*        | 

@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "colormath>=3.0.0",
     "dotenv>=0.9.9",
+    "graphviz>=0.21",
     "ipywidgets>=8.1.8",
     "jupyterlab>=4.4.10",
     "kagglehub>=0.3.13",
@@ -21,7 +22,10 @@ dependencies = [
     "scikit-learn>=1.7.2",
     "seaborn>=0.13.2",
     "torch>=2.9.0",
+    "torchsummary>=1.5.1",
+    "torchview>=0.2.7",
     "torchvision>=0.24.0",
+    "torchviz>=0.0.3",
 ]
 
 [tool.uv.sources]
@@ -36,3 +40,41 @@ torchvision = [
 name = "pytorch-cu130"
 url = "https://download.pytorch.org/whl/cu130"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.5",
+]
+
+[tool.ruff]
+# Allow lines to be as long as 100.
+line-length = 150
+
+# Include Jupyter Notebooks for linting and formatting
+extend-include = ["*.ipynb"]
+
+# Enable experimental/preview features (required for .ipynb formatting)
+preview = true
+
+# Match the project's Python requirement for accurate parsing/formatting
+target-version = "py313"
+
+[tool.ruff.lint]
+# Add specific rules if desired.
+# E = pycodestyle errors, F = Pyflakes, I = isort (imports)
+select = ["E", "F", "I"]
+
+# Ignore specific rules if needed
+ignore = []
+
+[tool.ruff.lint.isort]
+# Group imports automatically
+known-first-party = ["my_data_project"]
+
+[tool.ruff.format]
+# Keep formatting behavior explicit and stable
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+# Also format code blocks inside docstrings (optional)
+docstring-code-format = true

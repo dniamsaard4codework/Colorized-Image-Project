@@ -229,3 +229,6 @@ data/colorize_dataset/
 
 # Old notebooks
 old/
+
+# .vscode settings (if any)
+.vscode/
