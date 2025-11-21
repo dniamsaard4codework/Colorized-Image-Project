@@ -20,9 +20,7 @@ This project implements a comprehensive deep learning framework for automatic im
 
 Learn a mapping function:
 
-```
-G_θ : ℝ^(1×H×W) → ℝ^(2×H×W)
-```
+$$G_\theta : \mathbb{R}^{1 \times H \times W} \to \mathbb{R}^{2 \times H \times W}$$
 
 where:
 - **Input**: Luminance channel (L) from CIE Lab color space
@@ -125,9 +123,9 @@ Colorized-Image-Project/
 $$\mathcal{L}_G = \lambda_1 \cdot \mathcal{L}_{L1} + \lambda_2 \cdot \mathcal{L}_{perc} + \mathcal{L}_{adv}$$
 
 Where:
-- \(\mathcal{L}_{L1}\): Pixel-wise L1 loss on chrominance channels
-- \(\mathcal{L}_{perc}\): VGG16-based perceptual loss (extracted from relu1_2, relu2_2, relu3_3)
-- \(\mathcal{L}_{adv}\): Adversarial loss from PatchGAN discriminator
+- $\mathcal{L}_{L1}$: Pixel-wise L1 loss on chrominance channels
+- $\mathcal{L}_{perc}$: VGG16-based perceptual loss (extracted from relu1_2, relu2_2, relu3_3)
+- $\mathcal{L}_{adv}$: Adversarial loss from PatchGAN discriminator
 
 ---
 
