@@ -1,0 +1,2 @@
+Model_ID,Description,Architecture,GAN,L1_Loss,Perceptual_Loss,Lambda_L1,Lambda_Perceptual,PSNR,SSIM,CIEDE2000,LPIPS,Best_Val_Loss,Epochs
+C_PERCEPTUAL_LOW,cGAN + L1 + Perceptual (main proposed model with low Perceptual weight),U-Net,True,True,True,100.0,5.0,20.8660475922343,0.8420242690309836,13.150555855393995,0.2523502993086974,0.07825646363198757,50

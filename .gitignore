@@ -215,14 +215,17 @@ models/*/
 *.ckpt
 
 # Evaluation results and visualizations
-results/
-results/*/
+# Note: Keep key result images for documentation
+results/model_outputs/
 *.png
 *.jpg
 *.jpeg
 !data/**/*.png
 !data/**/*.jpg
 !data/**/*.jpeg
+!results/Evaluate/*.png
+!results/Evaluate/*.jpg
+!results/Evaluate/*.jpeg
 
 # Dataset (if large)
 data/colorize_dataset/
