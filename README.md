@@ -122,14 +122,12 @@ Colorized-Image-Project/
 
 **Generator Objective:**
 
-```
-ℒ_G = λ₁ · ℒ_L1 + λ₂ · ℒ_perc + ℒ_adv
-```
+$$\mathcal{L}_G = \lambda_1 \cdot \mathcal{L}_{L1} + \lambda_2 \cdot \mathcal{L}_{perc} + \mathcal{L}_{adv}$$
 
 Where:
-- **ℒ_L1**: Pixel-wise L1 loss on chrominance channels
-- **ℒ_perc**: VGG16-based perceptual loss (extracted from relu1_2, relu2_2, relu3_3)
-- **ℒ_adv**: Adversarial loss from PatchGAN discriminator
+- \(\mathcal{L}_{L1}\): Pixel-wise L1 loss on chrominance channels
+- \(\mathcal{L}_{perc}\): VGG16-based perceptual loss (extracted from relu1_2, relu2_2, relu3_3)
+- \(\mathcal{L}_{adv}\): Adversarial loss from PatchGAN discriminator
 
 ---
 
